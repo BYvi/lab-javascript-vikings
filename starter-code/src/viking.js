@@ -19,7 +19,7 @@ class Viking extends Soldier {
         this.name = name;
     }
     receiveDamage(damage) {
-        this.health = this.health - damage;
+        this.health = this.health - damage;  // <---- PLEASE THINK: What happens when this.health is smaller than 0? Is this expected behaviour?
 
         if (this.health > 0) {
             return (`${this.name} has received ${damage} points of damage`);
@@ -29,7 +29,7 @@ class Viking extends Soldier {
         }
     }
     battleCry() {
-        return ("Odin Owns You All!");
+        return ("Odin Owns You All!");  // <---- PLEASE CORRECT: This is not correct syntax. take away the parenthesys 
     }
 }
 
@@ -42,12 +42,12 @@ class Saxon extends Soldier {
         return this.strength;
     }
     receiveDamage(damage) {
-        this.health = this.health - damage;
+        this.health = this.health - damage;  // <---- PLEASE THINK: What happens when this.health is smaller than 0? Is this expected behaviour?
         if (this.health > 0) {
             return (`A Saxon has received ${damage} points of damage`);
 
         } else {
-            return (`A Saxon has died in combat`);
+            return (`A Saxon has died in combat`);  // <---- PLEASE CORRECT: This is not correct syntax. take away the parenthesys 
         }
     }
 }
